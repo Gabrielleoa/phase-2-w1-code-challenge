@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import Transactions from "phase-2-w1-code-challenge/src/Transaction.js;
-import TransactionForm from "./TransactionForm";
+import Transactions from "./Transaction";
+import TransactionForm from "./TranscationForm";
 function App (){
     const [transactions, setTransactions] = useState([]);
 
@@ -9,9 +9,11 @@ function App (){
         .then((response) => response.json())
         .then((data) => setTransactions(data));
     }, []);
+
     const handleAddTransaction = (newTransaction) => {
         setTransactions([...transactions, newTransaction]);
     };
+    
     return (
         <div>
             <h1>ROYAL BANK TRANSACTION APP</h1>

@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
+
 function Transactions({transactions}) {
     return(
         <div>
-            <h1>The Bank Of Flatiron</h1>
+            <h1 >The Bank Of Flatiron</h1>
             <table>
                 <thead>
                     <tr>
@@ -15,6 +16,9 @@ function Transactions({transactions}) {
                     {transactions.map((transaction) => (
                         <tr key = {transaction.id}>
                             <td>{transaction.description}</td>
+                            <td>{transaction.category}</td>
+
+
                             <td>{transaction.amount}</td>
                         </tr>
                     ))}

@@ -14,13 +14,14 @@ function TransactionForm({ onAddTransaction }) {
                 amount: (amount),
             };
             onAddTransaction(newTransaction);
-        };
+        
         onAddTransaction(newTransaction);
         setDescription('');
         setCategory('');
         setAmount('');
+        };
     }
-};
+
 return (
     <div>
         <h2>New Transaction</h2>
@@ -36,9 +37,9 @@ return (
             <label>
                 Category:
                 <input
-                type='number'
-                value={amount}
-                onChange={(e) => setAmount(e.target.value)}
+                type='text'
+                value={category}
+                onChange={(e) => setCategory(e.target.value)}
                 />
             </label>
             <label>
@@ -49,4 +50,5 @@ return (
         </form>
     </div>
 )
+};
 export default TransactionForm;
