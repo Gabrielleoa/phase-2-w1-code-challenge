@@ -21,11 +21,19 @@ function TransactionForm({ onAddTransaction }) {
         setAmount('');
         };
     }
+    const formStyle =  {
+        maxWidth:'400px',
+        margin:'auto',
+        padding:'20px',
+        border:'1px solid #ddd',
+        borderRadius:'8px',
+        boxShadow:'0 0 10px rgba(0, 0, 0, 0.1)',
+    };
 
 return (
     <div>
         <h2>New Transaction</h2>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} style={formStyle}>
             <label>
                 Description:
                 <input
@@ -34,6 +42,7 @@ return (
                 onChange={(e) => setDescription(e.target.value)}
                 />
             </label>
+            <br></br>
             <label>
                 Category:
                 <input
@@ -42,11 +51,13 @@ return (
                 onChange={(e) => setCategory(e.target.value)}
                 />
             </label>
+            <br></br>
             <label>
                 Amount:
                 <input type='number' value={amount} onChange={(e) => setAmount(e.target.value)}></input>
                 <button type='submit'>Add transaction</button>
             </label>
+            <br></br>
         </form>
     </div>
 )

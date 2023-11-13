@@ -18,8 +18,8 @@ function App (){
     return (
         <div>
           <Header/>
+          <TransactionForm onAddTransaction={handleAddTransaction}/>
             <Transactions transactions={transactions}/>
-            <TransactionForm onAddTransaction={handleAddTransaction}/>
             
 
         </div>
