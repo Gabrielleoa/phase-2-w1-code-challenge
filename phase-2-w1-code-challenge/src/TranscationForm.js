@@ -32,7 +32,7 @@ function TransactionForm({ onAddTransaction }) {
 
 return (
     <div>
-        <h2>New Transaction</h2>
+        <h2 >New Transaction</h2>
         <form onSubmit={handleSubmit} style={formStyle}>
             <label>
                 Description:
