@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 function Transactions({transactions}) {
     return(
         <div>
-            <h1 >The Bank Of Flatiron</h1>
+            <h1 style = {{paddingLeft: 50}} background-color='#CD5C5C' >The Bank Of Flatiron</h1>
             <table>
                 <thead>
                     <tr>
