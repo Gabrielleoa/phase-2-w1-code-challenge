@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Transactions from "./Transaction";
 import TransactionForm from "./TranscationForm";
+import Header from './Header';
 function App (){
     const [transactions, setTransactions] = useState([]);
 
@@ -19,6 +20,7 @@ function App (){
             <h1 style={{paddingLeft:50}} >ROYAL BANK TRANSACTION APP</h1>
             <Transactions transactions={transactions}/>
             <TransactionForm onAddTransaction={handleAddTransaction}/>
+            <Header/>
 
         </div>
     )
