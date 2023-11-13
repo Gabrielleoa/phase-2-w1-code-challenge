@@ -17,10 +17,10 @@ function App (){
     
     return (
         <div>
-            <h1 style={{paddingLeft:50}} >ROYAL BANK TRANSACTION APP</h1>
+          <Header/>
             <Transactions transactions={transactions}/>
             <TransactionForm onAddTransaction={handleAddTransaction}/>
-            <Header/>
+            
 
         </div>
     )
