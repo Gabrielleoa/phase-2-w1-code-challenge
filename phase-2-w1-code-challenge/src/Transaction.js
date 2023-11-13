@@ -9,6 +9,7 @@ function Transactions({transactions}) {
                         <th>Description</th>
                         <th>Category</th>
                         <th>Amount</th>
+                        <th>Date</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -19,6 +20,7 @@ function Transactions({transactions}) {
 
 
                             <td>{transaction.amount}</td>
+                            <td>{transaction.date}</td>
                         </tr>
                     ))}
                 </tbody>

@@ -3,6 +3,7 @@ function TransactionForm({ onAddTransaction }) {
     const [ description, setDescription] = useState('');
     const [ category, setCategory] = useState('');
     const [ amount, setAmount] = useState('');
+    const [ date, setDate]= useState('')
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -12,6 +13,7 @@ function TransactionForm({ onAddTransaction }) {
                 description,
                 category,
                 amount: (amount),
+                date,
             };
             onAddTransaction(newTransaction);
         
@@ -19,6 +21,7 @@ function TransactionForm({ onAddTransaction }) {
         setDescription('');
         setCategory('');
         setAmount('');
+        setDate('')
         };
     }
     const formStyle =  {
@@ -58,6 +61,14 @@ return (
                 <button type='submit'>Add transaction</button>
             </label>
             <br></br>
+            <label>
+                Date:
+                <input
+                type='date'
+                value={date}
+                onChange={(e) => setDate(e.target.value)}
+                />
+            </label>
         </form>
     </div>
 )
