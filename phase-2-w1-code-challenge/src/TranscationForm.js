@@ -58,7 +58,6 @@ return (
             <label>
                 Amount:
                 <input type='number' value={amount} onChange={(e) => setAmount(e.target.value)}></input>
-                <button type='submit'>Add transaction</button>
             </label>
             <br></br>
             <label>
@@ -66,8 +65,9 @@ return (
                 <input
                 type='date'
                 value={date}
-                onChange={(e) => setDate(e.target.value)}
-                />
+                onChange={(e) => setDate(e.target.value)}/> <br></br>
+                <button type='submit'>Add Transaction</button>
+                
             </label>
         </form>
     </div>
